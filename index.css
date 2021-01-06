@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+option:empty
+{
+  display:none;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+/*Header*/
+header{
+   text-align: center;
+   margin-top:50px;
+   margin-bottom: 5px;
+   padding:0;  
+   display: flex;
+}
+h1{
+    font-family: 'Roboto', sans-serif;
+    color: whitesmoke;
+    font-size:xx-large;
+    letter-spacing: 1px;;
+  }
+
+form{
+    margin-bottom: 30px;
+    color:whitesmoke;
+}
+
+#country{
+    font-size: 15px;
+    border-color: black;
+    background-color:#f1faee;
+    box-shadow: none;
+    color:black;
+    padding-left: 35px;
+    height: 28px;
+    max-width: 440px;
+    border-radius: 10px;
+}
+
+label{
+    color:whitesmoke;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-right: 8px;
+}
+/* Style the h1 with CSS slide-in */
+.slide-left {
+width:100%;
+overflow:hidden;
+}
+.slide-left{
+animation: slide-left 6s;
+}
+
+@keyframes slide-left {
+    from {
+        margin-left: 40%;
+        width: 100%; 
+    }
+    to {
+        margin-left: 0%;
+        width: 100%;
+    }
+}
+
+/* Flex */
+.mainContainer
+  {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+#container{
+    background-color:#065F89;
+    text-align: center;
+}
+.group {
+    margin:0;
+    display: flex;
+    flex-direction: column;
+}
+.item {
+    flex: 1;
+}
+
+#map 
+{
+    width: 100%;
+    height: 700px;
+}
+
+/* Style the error message */
+.error-message {
+    color: red;
+}
+.hidden{
+  display:none;
+}
+/* Mobile */
+@media only screen and (min-device-width: 768px){
+
+#country {
+    font-size: 16px;
+    max-height: 45px;
+    max-width: 250px;
+    border-radius: 10px;
+}
+
+#map 
+{
+    width:100%;
+    height: 800px;
+}
+}
+
+@media only screen and (min-device-width: 1024px){
+#map 
+    {
+        height: 3124;
+    }
+}
