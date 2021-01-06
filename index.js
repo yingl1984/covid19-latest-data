@@ -26,7 +26,7 @@ function fetchCovidData(country)
 		"x-rapidapi-host": "covid-19-tracking.p.rapidapi.com"
 	}};
   genericFetch(covidAPI+country, covidAPIHeader, (data)=>{
-    renderCovidData(JSON.stringify(data));
+    renderCovidData(data);
   })
 }
 
@@ -47,8 +47,8 @@ function fetchCountryList()
 function renderCovidData(data)
 {
  generateGeolocation(data);
-
 }
+
 function renderCountryList(data)
 {
   $("#root").append(`<form>
@@ -87,9 +87,8 @@ function formatQueryParams(params){
 
 //Google geoCode API
 function generateGeolocation(data){
-  let dat = JSON.parse(data);
   const params={
-    address: dat["Country_text"],
+    address: data["Country_text"],
     key: apiKey
   }
  const queryString=formatQueryParams(params);
@@ -99,18 +98,15 @@ function generateGeolocation(data){
   .then(response => {
     const contentString =
     "<div>" +
-    "<p><strong>Country</strong>: "+dat["Country_text"]+
+    "<p><strong>Country</strong>: "+data["Country_text"]+
     "</p>"+
-     "<p><strong>Lat Long</strong>: "+response.results[0].geometry.location.lat +", "+ 
-      response.results[0].geometry.location.lng+
+    "<p><strong>Active Cases</strong>: "+data["Active Cases_text"]+
     "</p>"+
-    "<p><strong>Active Cases</strong>: "+dat["Active Cases_text"]+
+    "<p><strong>Total Deaths</strong>: "+data["Total Deaths_text"]+
     "</p>"+
-    "<p><strong>Total Deaths</strong>: "+dat["Total Deaths_text"]+
+    "<p><strong>Total Cases</strong>: "+data["Total Cases_text"]+
     "</p>"+
-    "<p><strong>Total Cases</strong>: "+dat["Total Cases_text"]+
-    "</p>"+
-    "<p><strong>Total Recovered</strong>: "+dat["Total Recovered_text"]+
+    "<p><strong>Total Recovered</strong>: "+data["Total Recovered_text"]+
     "</p>"+
     "</div>";
     

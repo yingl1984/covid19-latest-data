@@ -30,6 +30,10 @@ form{
     margin-bottom: 30px;
     color:whitesmoke;
 }
+#description p{
+    font-family: Arial, Helvetica, sans-serif;
+    color:whitesmoke;
+}
 
 #country{
     font-size: 15px;
@@ -44,17 +48,17 @@ form{
 }
 
 label{
-    color:whitesmoke;
+    color:white;
     font-family: Arial, Helvetica, sans-serif;
     margin-right: 8px;
 }
 /* Style the h1 with CSS slide-in */
 .slide-left {
-width:100%;
-overflow:hidden;
+    width:100%;
+    overflow:hidden;
 }
 .slide-left{
-animation: slide-left 6s;
+    animation: slide-left 6s;
 }
 
 @keyframes slide-left {
