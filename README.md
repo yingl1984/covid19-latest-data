@@ -7,7 +7,7 @@ Users select a country in the dropdown list, then the country will be marked on 
 ## Screenshots
 ### Load all the countries of the world in the dropdown list
 ![screenshot](screenshot1.png)
-### Mark the country in the map, and show the Covid-19 latest data in the information window
+### Mark the selected country in the map. Show the Covid-19 latest data in the information window
 ![screenshot](screenshot2.png)
 
 ## 4 APIs used in this app
