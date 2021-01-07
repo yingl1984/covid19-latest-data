@@ -17,6 +17,8 @@ function genericFetch(endpoint, covidAPIHeader, cb)
     $('#js-error-message').text(`Something went wrong: ${err.message}`);
   });
 }
+
+//Get the Covid-19 data from API
 function fetchCovidData(country)
 {
    const covidAPIHeader = {
@@ -30,6 +32,7 @@ function fetchCovidData(country)
   })
 }
 
+//Get the country data from API
 function fetchCountryList()
 {
   const countriesAPIHeader = {
@@ -44,11 +47,13 @@ function fetchCountryList()
   })
 }
 
+//Render covid-19 data of the selected country
 function renderCovidData(data)
 {
  generateGeolocation(data);
 }
 
+//Render dropdown list with countries
 function renderCountryList(data)
 {
   $("#root").append(`<form>

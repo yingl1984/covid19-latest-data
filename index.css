@@ -26,6 +26,26 @@ h1{
     letter-spacing: 1px;;
   }
 
+/* Style the h1 with CSS slide-in */
+.slide-left {
+    width:100%;
+    overflow:hidden;
+}
+.slide-left{
+    animation: slide-left 6s;
+}
+
+@keyframes slide-left {
+    from {
+        margin-left: 40%;
+        width: 100%; 
+    }
+    to {
+        margin-left: 0%;
+        width: 100%;
+    }
+}
+
 form{
     margin-bottom: 30px;
     color:whitesmoke;
@@ -52,25 +72,6 @@ label{
     font-family: Arial, Helvetica, sans-serif;
     margin-right: 8px;
 }
-/* Style the h1 with CSS slide-in */
-.slide-left {
-    width:100%;
-    overflow:hidden;
-}
-.slide-left{
-    animation: slide-left 6s;
-}
-
-@keyframes slide-left {
-    from {
-        margin-left: 40%;
-        width: 100%; 
-    }
-    to {
-        margin-left: 0%;
-        width: 100%;
-    }
-}
 
 /* Flex */
 .mainContainer
@@ -92,6 +93,7 @@ label{
     flex: 1;
 }
 
+/* Map */
 #map 
 {
     width: 100%;
@@ -103,8 +105,9 @@ label{
     color: red;
 }
 .hidden{
-  display:none;
+    display:none;
 }
+
 /* Mobile */
 @media only screen and (min-device-width: 768px){
 
@@ -114,12 +117,11 @@ label{
     max-width: 250px;
     border-radius: 10px;
 }
-
 #map 
-{
-    width:100%;
-    height: 800px;
-}
+    {
+        width:100%;
+        height: 800px;
+    }
 }
 
 @media only screen and (min-device-width: 1024px){
